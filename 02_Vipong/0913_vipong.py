@@ -4,10 +4,10 @@ import random
 # later, usepygraph to make this visualization.
 #line = [[1,1],[2,4]]
 
-simulation_num = 10000
+simulation_num = 10000000
 
 #prallel line's max length
-parallel_length = 100000
+parallel_length = 100000000
 
 #needle length
 needle_length = 1
@@ -20,11 +20,11 @@ d_height = d/2
 num_cossed = 0
 num_ncross = 0
 persentA = (2*needle_length)/(d*pi)
-
+"""
 simulation_num = int(input("simulation_num: "))
 parallel_length = int(input("parallel_length: "))
 d = float(input("d : "))
-
+"""
 for i in range(simulation_num):
     a_1 = random.uniform(0, parallel_length)
     b_1 = random.uniform(d_height*-1, d_height)
@@ -45,3 +45,7 @@ print("simulated %d times, parrallel line is considered %d\nsimulated persentage
 
 difference = (abs(persentA-calc_presentA)/persentA)*100
 print("difference persentage %f%%" % difference)
+
+real_pi = (2*needle_length)/(calc_presentA*d)
+
+print("pi is %f" %real_pi)
