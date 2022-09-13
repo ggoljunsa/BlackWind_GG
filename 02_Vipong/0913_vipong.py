@@ -20,11 +20,11 @@ d_height = d/2
 num_cossed = 0
 num_ncross = 0
 persentA = (2*needle_length)/(d*pi)
-"""
+
 simulation_num = int(input("simulation_num: "))
 parallel_length = int(input("parallel_length: "))
 d = float(input("d : "))
-"""
+
 for i in range(simulation_num):
     a_1 = random.uniform(0, parallel_length)
     b_1 = random.uniform(d_height*-1, d_height)
